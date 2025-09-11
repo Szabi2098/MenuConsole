@@ -48,23 +48,17 @@ namespace MenuConsole
 
                 }else if (valasz == "2")
                 {
-                    string nem = "";
-                    if (ffi == true)
-                    {
-                        nem = "Férfi";
-                    }else
-                    {
-                        nem = "Nő";
-                    }
                     Console.WriteLine($"Név: {nev} \n" +
-                        $"Neme: {nem}\n" +
+                        $"Neme: {(ffi ? "Férfi" : "Nő")}\n" +
                         $"Születési év: {szulev}");
                     Console.ReadLine();
 
 
                 }else if (valasz == "3")
                 {
+                    Console.Beep();
                     Console.WriteLine("Biztosan ki szeretne lépni? (i/n)");
+                    Console.Beep();
                     valasz = Console.ReadLine() != "i" ? " " : "3";
 
 
