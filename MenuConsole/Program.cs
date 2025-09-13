@@ -56,9 +56,7 @@ namespace MenuConsole
 
                 }else if (valasz == "3")
                 {
-                    Console.Beep();
                     Console.WriteLine("Biztosan ki szeretne lépni? (i/n)");
-                    Console.Beep();
                     valasz = Console.ReadLine() != "i" ? " " : "3";
 
 
