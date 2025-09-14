@@ -10,6 +10,9 @@ namespace MenuConsole
     {
         static void Main(string[] args)
         {
+            Console.BackgroundColor = ConsoleColor.DarkMagenta; // sötét lila háttér
+            Console.ForegroundColor = ConsoleColor.White;       // fehér betűszín
+            Console.Clear();
             string nev = "";
             bool ffi = true;
             int szulev = 0;
@@ -19,19 +22,25 @@ namespace MenuConsole
             {
                 Console.Clear();
                 Console.Title = "Személyes adatok kezelése";
+                Console.SetCursorPosition(5, 0);
                 Console.WriteLine("---- Személyes adatok kezelése ---- \n");
+                Console.SetCursorPosition(8, 2);
                 Console.WriteLine("1 - Személyes adatok bevitele");
+                Console.SetCursorPosition(8, 3);
                 Console.WriteLine("2 - Személyes adatok kiírása");
+                Console.SetCursorPosition(8, 4);
                 Console.WriteLine("3 - Kilépés");
+                Console.SetCursorPosition(8, 6);
                 Console.WriteLine("Menüpont számával választhat");
                 valasz = Console.ReadLine();
 
                 if (valasz == "1")
                 {
+                    Console.Clear();
                     Console.WriteLine("Név: ");
                     nev = Console.ReadLine();
 
-                    Console.WriteLine("Neve (f/n): ");
+                    Console.WriteLine("Neme (f/n): ");
                     ffi = Console.ReadLine() == "f";
 
                     string szulevStr = "";
@@ -48,6 +57,7 @@ namespace MenuConsole
 
                 }else if (valasz == "2")
                 {
+                    Console.Clear();
                     Console.WriteLine($"Név: {nev} \n" +
                         $"Neme: {(ffi ? "Férfi" : "Nő")}\n" +
                         $"Születési év: {szulev}");
@@ -56,12 +66,14 @@ namespace MenuConsole
 
                 }else if (valasz == "3")
                 {
+                    Console.Clear();
                     Console.WriteLine("Biztosan ki szeretne lépni? (i/n)");
                     valasz = Console.ReadLine() != "i" ? " " : "3";
 
 
                 }else
                 {
+                    Console.Clear();
                     Console.WriteLine("Nem létező menüpont!");
                     Console.ReadLine();
                 }
@@ -70,3 +82,4 @@ namespace MenuConsole
         }
     }
 }
+    
